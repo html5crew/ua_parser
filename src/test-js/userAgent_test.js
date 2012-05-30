@@ -23,7 +23,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of android mobile device', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_GALAXY_NEXUS);
+                ua = util.userAgent(UA_GALAXY_NEXUS);
             });
             it('should identify browser : android', function () {
                 expect(ua.browser.android).toBeTruthy();
@@ -41,7 +41,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of iphone mobile device', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_IPHONE_4S);
+                ua = util.userAgent(UA_IPHONE_4S);
             });
             it('should identify browser : iphone', function () {
                 expect(ua.browser.iphone).toBeTruthy();
@@ -58,7 +58,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of ipad tablet device', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_IPAD);
+                ua = util.userAgent(UA_IPAD);
             });
             it('should identify browser : ios', function () {
                 expect(ua.browser.ipad).toBeTruthy();
@@ -75,7 +75,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of android tablet device', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_GALAXY_TAB_10);
+                ua = util.userAgent(UA_GALAXY_TAB_10);
             });
             it('should identify browser : android', function () {
                 expect(ua.browser.android).toBeTruthy();
@@ -93,7 +93,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of bada(dolfin) phone', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_BADA_3);
+                ua = util.userAgent(UA_BADA_3);
             });
             it('should identify browser : dolfin', function () {
                 expect(ua.browser.dolfin).toBeTruthy();
@@ -110,7 +110,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of polaris browser', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_POLARIS);
+                ua = util.userAgent(UA_POLARIS);
             });
             it('should identify Browser : polaris', function () {
                 expect(ua.browser.polaris).toBeTruthy();
@@ -123,7 +123,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of mobile ie7', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_MOBI_IE7);
+                ua = util.userAgent(UA_MOBI_IE7);
             });
             it('should identify Browser : msie', function () {
                 expect(ua.browser.msie).toBeTruthy();
@@ -139,7 +139,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of mobile ie9', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_MOBI_IE9);
+                ua = util.userAgent(UA_MOBI_IE9);
             });
             it('should identify Browser : msie', function () {
                 expect(ua.browser.msie).toBeTruthy();
@@ -156,7 +156,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of opera mobile', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_MOBI_OPERA);
+                ua = util.userAgent(UA_MOBI_OPERA);
             });
             it('should identify Browser : opera', function () {
                 expect(ua.browser.opera).toBeTruthy();
@@ -175,7 +175,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of mobile firefox', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_MOBI_FIREFOX);
+                ua = util.userAgent(UA_MOBI_FIREFOX);
             });
             it('should identify Browser : firefox', function () {
                 expect(ua.browser.firefox).toBeTruthy();
@@ -192,7 +192,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of safari', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_SAFARI);
+                ua = util.userAgent(UA_SAFARI);
             });
             it('should identify Browser : safari', function () {
                 expect(ua.browser.safari).toBeTruthy();
@@ -210,7 +210,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of firefox', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_FIREFOX);
+                ua = util.userAgent(UA_FIREFOX);
             });
             it('should identify Browser : firefox', function () {
                 expect(ua.browser.firefox).toBeTruthy();
@@ -227,7 +227,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of chrome', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_CHROME);
+                ua = util.userAgent(UA_CHROME);
             });
             it('should identify Browser : chrome', function () {
                 expect(ua.browser.chrome).toBeTruthy();
@@ -244,7 +244,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of opera', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_OPERA);
+                ua = util.userAgent(UA_OPERA);
             });
             it('should identify Browser : chrome', function () {
                 expect(ua.browser.opera).toBeTruthy();
@@ -261,7 +261,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of msie 6', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_IE6);
+                ua = util.userAgent(UA_IE6);
             });
             it('should identify Browser : msie 6', function () {
                 expect(ua.browser.msie).toBeTruthy();
@@ -278,7 +278,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of msie 7', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_IE7);
+                ua = util.userAgent(UA_IE7);
             });
             it('should identify Browser : msie 7', function () {
                 expect(ua.browser.msie).toBeTruthy();
@@ -295,7 +295,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of msie 8', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_IE8);
+                ua = util.userAgent(UA_IE8);
             });
             it('should identify Browser : ie6', function () {
                 expect(ua.browser.msie).toBeTruthy();
@@ -312,7 +312,7 @@ describe("userAgent.js", function () {
         describe('Identify user-agents of msie 9', function () {
             var ua;
             beforeEach(function() {
-                ua = daumUtil.userAgent(UA_IE9);
+                ua = util.userAgent(UA_IE9);
             });
             it('should identify Browser : msie', function () {
                 expect(ua.browser.msie).toBeTruthy();

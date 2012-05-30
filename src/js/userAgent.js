@@ -73,4 +73,4 @@
         };
     };
 
-})(window.daumUtil = (typeof window.daumUtil === 'undefined') ? {} : window.daumUtil);
+})(window.util = (typeof window.util === 'undefined') ? {} : window.util);
