@@ -1,10 +1,10 @@
 # userAgent
-브라우져의 useragent를 이용하여 해당 브라우져 및 버젼을 파악할 수 있는 라이브러리
+check browser and browser's version from userAgent
 
 # usage
 
 =========================
-var ua = daumUtil.userAgent();
+var ua = util.userAgent();
 
 ua = {
     ua,
@@ -19,5 +19,3 @@ ua = {
     platform : ["pc" | "tablet" | "mobile"] // type string
 };
 =========================
-
-사용시 위와 같은 객체를 리턴해준다.
