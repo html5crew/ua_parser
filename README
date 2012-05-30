@@ -16,7 +16,7 @@ ua = {
     		patch  // type string
     	}
     }
-    platform : [pc | tablet | mobile]
+    platform : ["pc" | "tablet" | "mobile"] // type string
 };
 =========================
 
