@@ -15,7 +15,7 @@ ua = {
     		minor, // type string
     		patch  // type string
     	}
-    }
+    },
     platform : ["pc" | "tablet" | "mobile"] // type string
 };
 =========================
