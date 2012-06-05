@@ -1,9 +1,12 @@
 # userAgent
+
 check browser and browser's version from userAgent
 
-# usage
+[![Build Status](https://secure.travis-ci.org/eastkiki/userAgent.png?branch=master)](http://travis-ci.org/eastkiki/userAgent)
 
-=========================
+## usage
+
+~~~~~~~
 var ua = util.userAgent();
 
 ua = {
@@ -18,4 +21,4 @@ ua = {
     },
     platform : ["pc" | "tablet" | "mobile"] // type string
 };
-=========================
+~~~~~~~
