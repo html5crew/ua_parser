@@ -1,6 +1,15 @@
 /*jshint browser: true
 */
 /*global slide:true, Class: true, gesture: true*/
+
+// Make userAgent a Node module, if possible.
+var util = {};
+if (typeof exports === 'object' && exports) {
+    exports.util = util;
+} else {
+    window.util = (typeof window.util === 'undefined') ? {} : window.util;
+}
+
 (function (exports) {
     'use strict';
 
@@ -73,4 +82,4 @@
         };
     };
 
-})(window.util = (typeof window.util === 'undefined') ? {} : window.util);
+})(util);

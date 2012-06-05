@@ -7,17 +7,17 @@
         "async": "0.1.x",
         "cli-color": "0.1.x",
         "optimist": "0.3.x",
+        "jshint": "0.7.x",
         "node-minify": "0.3.x"
     },
     "devDependencies": {
-        "jshint": "0.7.x",
         "jasmine-node": "1.0.x"
     },
     "keywords": ["ua", "browser", "detect", "userAgent"],
     "repository": {"url": "git@github.com:eastkiki/userAgent.git", "type": "git"},
-    "main": "servicefarmupload",
+    "main": "src/userAgent.js",
     "engines": { "node": ">= 0.6" },
     "scripts":{
-        "test": "jshint src/js/userAgent.js"
+        "test": "node_modules/.bin/jasmine-node src/test-js/userAgent_spec.js"
     }
 }
