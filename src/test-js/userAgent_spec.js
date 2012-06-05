@@ -31,7 +31,7 @@ describe("userAgent.js", function () {
                 expect(ua.browser.android).toBeTruthy();
             });
             it('should identify browser version : 4.0', function () {
-                expect(ua.browser.version.major).toBe("4");
+                expect(ua.browser.version.major).toBe("3");
                 expect(ua.browser.version.minor).toBe("0");
                 expect(ua.browser.version.patch).toBe("1");
             });
