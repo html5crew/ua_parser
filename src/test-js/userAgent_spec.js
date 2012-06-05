@@ -30,8 +30,8 @@ describe("userAgent.js", function () {
             it('should identify browser : android', function () {
                 expect(ua.browser.android).toBeTruthy();
             });
-            it('should identify browser version : 4.0', function () {
-                expect(ua.browser.version.major).toBe("3");
+            it('should identify browser version : 4.0.1', function () {
+                expect(ua.browser.version.major).toBe("4");
                 expect(ua.browser.version.minor).toBe("0");
                 expect(ua.browser.version.patch).toBe("1");
             });
@@ -330,29 +330,3 @@ describe("userAgent.js", function () {
         
     });
 });
-
-
-// (function() {
-//     var jasmineEnv = jasmine.getEnv();
-//     jasmineEnv.updateInterval = 250;
-    
-//     var htmlReporter = new jasmine.HtmlReporter();
-//     jasmineEnv.addReporter(htmlReporter);
-//     jasmineEnv.specFilter = function(spec) {
-//         return htmlReporter.specFilter(spec);
-//     };
-
-//     var currentWindowOnload = window.onload;
-//     window.onload = function() {
-//     if (currentWindowOnload) {
-//         currentWindowOnload();
-//     }
-
-//     document.querySelector('.version').innerHTML = jasmineEnv.versionString();
-//         execJasmine();
-//     };
-
-//     function execJasmine() {
-//         jasmineEnv.execute();
-//     }
-// })();
