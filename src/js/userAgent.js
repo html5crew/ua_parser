@@ -1,6 +1,6 @@
 /*jshint browser: true
 */
-/*global slide:true, Class: true, gesture: true*/
+/*global slide, Class, gesture*/
 (function (exports) {
     'use strict';
 
