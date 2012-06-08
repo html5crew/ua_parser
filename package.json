@@ -2,7 +2,11 @@
     "name": "userAgent",
     "description": "check browser and browser's version from userAgent",
     "version": "1.0.0",
-    "author": "Dong-il Kim <east715@gmail.com>",
+    "author": {
+        "name" : "Dong-il Kim",
+        "email" : "east715@gmail.com",
+        "url" : "https://github.com/eastkiki/userAgent"
+    },
     "dependencies": {
     },
     "devDependencies": {
