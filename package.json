@@ -1,7 +1,7 @@
 {
-    "name": "userAgent",
+    "name": "ua_parser",
     "description": "check browser and browser's version from userAgent",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": {
         "name" : "Dong-il Kim",
         "email" : "east715@gmail.com",
@@ -17,7 +17,7 @@
         "cli-color": "0.1.x",
         "optimist": "0.3.x"
     },
-    "keywords": ["ua", "browser", "detect", "userAgent"],
+    "keywords": ["ua", "browser", "detect", "userAgent", "parse"],
     "repository": {"url": "git@github.com:eastkiki/userAgent.git", "type": "git"},
     "main": "src/userAgent.js",
     "engines": { "node": ">= 0.6" },

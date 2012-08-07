@@ -33,13 +33,13 @@ ua = {
 
 ~~~~~~~
 
-npm install userAgent
+npm install ua_parser
 
 ~~~~~~~
 
 ~~~~~~~
 
-var util = require("userAgent").util;
+var util = require("ua_parser").util;
 var ua = util.userAgent(USERAGENT_STRING);
 
 ua = {
