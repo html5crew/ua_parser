@@ -1,4 +1,6 @@
-var util = require("../js/userAgent.js").util;
+/* global describe: true, beforeEach, it
+*/
+var util = require("../../js/userAgent.js").util;
 
 describe("userAgent.js", function () {
     var UA_GALAXY_NEXUS = "Mozilla/5.0 (Linux; U; Android 4.0.1; ko-kr; Galaxy Nexus Build/ITL41F) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
@@ -12,13 +14,13 @@ describe("userAgent.js", function () {
         UA_MOBI_IE9 = "Mozilla/4.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/3.1; IEMobile/9.0; NOKIA; Lumia 710)",
         UA_MOBI_OPERA = "Opera/9.80 (Android 4.0.1; Linux; Opera Mobi/ ADR-1111101157; U; en) Presto/2.9.201 Version/11.50";
         
-        UA_IE6 = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)";
-        UA_IE7 = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)";
-        UA_IE8 = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)";
-        UA_IE9 = "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)";
-        UA_CHROME = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.46 Safari/536.5";
-        UA_SAFARI = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.5 Safari/534.55.3";
-        UA_FIREFOX = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0";
+    var UA_IE6 = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)",
+        UA_IE7 = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)",
+        UA_IE8 = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)",
+        UA_IE9 = "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)",
+        UA_CHROME = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.46 Safari/536.5",
+        UA_SAFARI = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.5 Safari/534.55.3",
+        UA_FIREFOX = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0",
         UA_OPERA = "Opera/9.80 (Windows NT 6.1; WOW64; U; ko) Presto/2.10.229 Version/11.62";
     
     describe('Identify user-agents', function () {
