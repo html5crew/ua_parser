@@ -1,5 +1,2 @@
-build
-build/node_modules
-build/userAgent.min.js
-node_modules
+node_modules/
 npm-debug.log
