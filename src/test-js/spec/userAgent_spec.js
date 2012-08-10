@@ -21,7 +21,9 @@ describe("userAgent.js", function () {
         UA_CHROME = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.46 Safari/536.5",
         UA_SAFARI = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.5 Safari/534.55.3",
         UA_FIREFOX = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0",
-        UA_OPERA = "Opera/9.80 (Windows NT 6.1; WOW64; U; ko) Presto/2.10.229 Version/11.62";
+        UA_OPERA = "Opera/9.80 (Windows NT 6.1; WOW64; U; ko) Presto/2.10.229 Version/11.62",
+        UA_CHROME_MAC = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.57 Safari/537.1",
+        UA_SAFARI_MAC = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/536.25 (KHTML, like Gecko) Version/6.0 Safari/536.25";
     
     describe('Identify user-agents', function () {
         describe('Identify user-agents of android mobile device', function () {
@@ -39,6 +41,9 @@ describe("userAgent.js", function () {
             });
             it('should identify Platform : mobile', function () {
                 expect(ua.platform).toBe("mobile");
+            });
+            it('should identify OS : android', function () {
+                expect(ua.os.android).toBeTruthy();
             });
         });
 
@@ -58,6 +63,9 @@ describe("userAgent.js", function () {
             it('should identify Platform : mobile', function () {
                 expect(ua.platform).toBe("mobile");
             });
+            it('should identify OS : ios', function () {
+                expect(ua.os.ios).toBeTruthy();
+            });
         });
         describe('Identify user-agents of ipad tablet device', function () {
             var ua;
@@ -75,6 +83,9 @@ describe("userAgent.js", function () {
             it('should identify Platform : tablet', function () {
                 expect(ua.platform).toBe("tablet");
             });
+            it('should identify OS : ios', function () {
+                expect(ua.os.ios).toBeTruthy();
+            });
         });
         describe('Identify user-agents of android tablet device', function () {
             var ua;
@@ -91,7 +102,9 @@ describe("userAgent.js", function () {
             it('should identify Platform : tablet', function () {
                 expect(ua.platform).toBe("tablet");
             });
-            
+            it('should identify OS : android', function () {
+                expect(ua.os.android).toBeTruthy();
+            });
         });
 
         describe('Identify user-agents of bada(dolfin) phone', function () {
@@ -109,6 +122,9 @@ describe("userAgent.js", function () {
             it('should identify Platform : mobile', function () {
                 expect(ua.platform).toBe("mobile");
             });
+            it('should identify OS : unknown', function () {
+                expect(ua.os.unknown).toBeTruthy();
+            });
         });
 
         describe('Identify user-agents of polaris browser', function () {
@@ -121,6 +137,9 @@ describe("userAgent.js", function () {
             });
             it('should identify Platform : mobile', function () {
                 expect(ua.platform).toBe("mobile");
+            });
+            it('should identify OS : unknown', function () {
+                expect(ua.os.unknown).toBeTruthy();
             });
         });
 
@@ -139,6 +158,9 @@ describe("userAgent.js", function () {
                 expect(ua.browser.version.major).toBe("7");
                 expect(ua.browser.version.minor).toBe("0");
             });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
+            });
         });
         describe('Identify user-agents of mobile ie9', function () {
             var ua;
@@ -154,6 +176,9 @@ describe("userAgent.js", function () {
             it('should identify browser version : 9.0', function () {
                 expect(ua.browser.version.major).toBe("9");
                 expect(ua.browser.version.minor).toBe("0");
+            });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
             });
         });
 
@@ -171,6 +196,9 @@ describe("userAgent.js", function () {
             it('should identify browser version : 11.5', function () {
                 expect(ua.browser.version.major).toBe('11');
                 expect(ua.browser.version.minor).toBe('50');
+            });
+            it('should identify OS : android', function () {
+                expect(ua.os.android).toBeTruthy();
             });
         });
 
@@ -191,6 +219,9 @@ describe("userAgent.js", function () {
                 expect(ua.browser.version.major).toBe('9');
                 expect(ua.browser.version.minor).toBe('0');
             });
+            it('should identify OS : android', function () {
+                expect(ua.os.android).toBeTruthy();
+            });
         });
 
         describe('Identify user-agents of safari', function () {
@@ -209,6 +240,9 @@ describe("userAgent.js", function () {
                 expect(ua.browser.version.minor).toBe("1");
                 expect(ua.browser.version.patch).toBe("5");
             });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
+            });
         });
 
         describe('Identify user-agents of firefox', function () {
@@ -225,6 +259,9 @@ describe("userAgent.js", function () {
             it('should identify browser version : 12.0', function () {
                 expect(ua.browser.version.major).toBe('12');
                 expect(ua.browser.version.minor).toBe('0');
+            });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
             });
         });
 
@@ -243,6 +280,9 @@ describe("userAgent.js", function () {
                 expect(ua.browser.version.major).toBe('19');
                 expect(ua.browser.version.minor).toBe('0');
             });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
+            });
         });
 
         describe('Identify user-agents of opera', function () {
@@ -259,6 +299,9 @@ describe("userAgent.js", function () {
             it('should identify browser version : 11.62', function () {
                 expect(ua.browser.version.major).toBe('11');
                 expect(ua.browser.version.minor).toBe('62');
+            });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
             });
         });
 
@@ -277,6 +320,9 @@ describe("userAgent.js", function () {
                 expect(ua.browser.version.major).toBe('6');
                 expect(ua.browser.version.minor).toBe('0');
             });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
+            });
         });
 
         describe('Identify user-agents of msie 7', function () {
@@ -293,6 +339,9 @@ describe("userAgent.js", function () {
             it('should identify browser version : 7.0', function () {
                 expect(ua.browser.version.major).toBe('7');
                 expect(ua.browser.version.minor).toBe('0');
+            });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
             });
         });
 
@@ -311,6 +360,9 @@ describe("userAgent.js", function () {
                 expect(ua.browser.version.major).toBe('8');
                 expect(ua.browser.version.minor).toBe('0');
             });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
+            });
         });
         
         describe('Identify user-agents of msie 9', function () {
@@ -328,7 +380,50 @@ describe("userAgent.js", function () {
                 expect(ua.browser.version.major).toBe('9');
                 expect(ua.browser.version.minor).toBe('0');
             });
+            it('should identify OS : windows', function () {
+                expect(ua.os.windows).toBeTruthy();
+            });
+        });
+
+        describe('Identify user-agents of chrome on Mac', function () {
+            var ua;
+            beforeEach(function() {
+                ua = util.userAgent(UA_CHROME_MAC);
+            });
+            it('should identify Browser : chrome', function () {
+                expect(ua.browser.chrome).toBeTruthy();
+            });
+            it('should identify Platform : pc', function () {
+                expect(ua.platform).toBe("pc");
+            });
+            it('should identify browser version : 21.0', function () {
+                expect(ua.browser.version.major).toBe('21');
+                expect(ua.browser.version.minor).toBe('0');
+            });
+            it('should identify OS : mac', function () {
+                expect(ua.os.mac).toBeTruthy();
+            });
         });
         
+        describe('Identify user-agents of safari on Mac', function () {
+            var ua;
+            beforeEach(function() {
+                ua = util.userAgent(UA_SAFARI_MAC);
+            });
+            it('should identify Browser : safari', function () {
+                expect(ua.browser.safari).toBeTruthy();
+            });
+            it('should identify Platform : pc', function () {
+                expect(ua.platform).toBe("pc");
+            });
+            it('should identify browser version : 5.1.5', function () {
+                expect(ua.browser.version.major).toBe("6");
+                expect(ua.browser.version.minor).toBe("0");
+                expect(ua.browser.version.patch).toBe("0");
+            });
+            it('should identify OS : mac', function () {
+                expect(ua.os.mac).toBeTruthy();
+            });
+        });
     });
 });

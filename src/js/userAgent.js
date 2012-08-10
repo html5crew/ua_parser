@@ -3,8 +3,8 @@
 /*global slide, Class, gesture*/
 
 // Make userAgent a Node module, if possible.
-var util = {};
 if (typeof exports === 'object' && exports) {
+    var util = {};
     exports.util = util;
 } else {
     window.util = (typeof window.util === 'undefined') ? {} : window.util;
@@ -75,10 +75,22 @@ if (typeof exports === 'object' && exports) {
             }
         }
         
+        function checkOs (ua) {
+            var os = {},
+                match = (/android/.test(ua)? "android" : false) ||
+                        (/like mac os x./.test(ua)? "ios" : false)||
+                        (/(mac os)/.test(ua)? "mac" : false) ||
+                        (/(windows)/.test(ua) && !(/polaris|natedata|(01[0|1|6|7|8|9]\d{3,4}\d{4}$)/.test(ua))? "windows" : false) ||
+                        (/(linux)/.test(ua)? "linux" : false) || "unknown";
+            os[match] = true;
+            return os;
+        }
+
         return {
             ua: ua,
             browser: checkUserAgent(ua),
-            platform: checkPlatform(ua)
+            platform: checkPlatform(ua),
+            os: checkOs(ua)
         };
     };
 
