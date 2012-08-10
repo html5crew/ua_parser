@@ -15,14 +15,17 @@ var ua = util.userAgent();
 ua = {
     ua,
     browser: {
-    	[msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin] : true,
+    	[msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin | unknown] : true,
     	version: {
     		major, // type string
     		minor, // type string
     		patch  // type string
     	}
     },
-    platform : ["pc" | "tablet" | "mobile"] // type string
+    platform : ["pc" | "tablet" | "mobile"], // type string
+    os : {
+        ["windows" | "mac" | "linux" | "android" | "ios" | "unknown"] : true
+    }
 };
 
 ~~~~~~~
