@@ -55,7 +55,10 @@ ua = {
             patch  // type string
         }
     },
-    platform : ["pc" | "tablet" | "mobile"] // type string
+    platform : ["pc" | "tablet" | "mobile"], // type string
+    os : {
+        ["windows" | "mac" | "linux" | "android" | "ios" | "unknown"] : true
+    }
 };
 
 ~~~~~~~
