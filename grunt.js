@@ -14,10 +14,16 @@ module.exports = function(grunt) {
     lint: {
       files: ['src/js/*.js', 'src/test-js/*.js']
     },
+    concat: {
+      dist: {
+        src: ['<banner:meta.banner>', 'src/js/*.js'],
+        dest: 'dist/userAgent-<%= pkg.version %>.js'
+      }
+    },
     min: {
       dist: {
         src: ['<banner:meta.banner>', 'src/js/*.js'],
-        dest: 'dist/<%= pkg.title || pkg.name %>.min.js'
+        dest: 'dist/userAgent-<%= pkg.version %>.min.js'
       }
     },
     jshint: {
@@ -55,6 +61,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-jasmine');
   // Default task.
-  grunt.registerTask('default', 'lint jasmine min');
+  grunt.registerTask('default', 'lint jasmine concat min');
 
 };
