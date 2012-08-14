@@ -48,7 +48,7 @@ var ua = util.userAgent(USERAGENT_STRING);
 ua = {
     ua,
     browser: {
-        [msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin] : true,
+        [msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin | unknown] : true,
         version: {
             major, // type string
             minor, // type string
