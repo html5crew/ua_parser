@@ -20,5 +20,11 @@
     "scripts":{
         "test": "node build.js",
         "start": "node build.js"
-    }
+    },
+    "licenses": [
+        {
+          "type": "GNU LGPL",
+          "url": "http://github.com/eastkiki/userAgent/blob/master/LICENSE"
+        }
+    ]
 }
