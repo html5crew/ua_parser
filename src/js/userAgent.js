@@ -34,6 +34,7 @@ if (typeof exports === 'object' && exports) {
             }
 
             browser[match[1]] = true;
+            browser.name = match[1];
             browser.version = {};
             browser.version.info = match[2] || "0";
 
@@ -83,6 +84,7 @@ if (typeof exports === 'object' && exports) {
                         (/(windows)/.test(ua) && !(/polaris|natedata|(01[0|1|6|7|8|9]\d{3,4}\d{4}$)/.test(ua))? "windows" : false) ||
                         (/(linux)/.test(ua)? "linux" : false) || "unknown";
             os[match] = true;
+            os.name = match;
             return os;
         }
 
