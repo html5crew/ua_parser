@@ -15,16 +15,18 @@ var ua = util.userAgent();
 ua = {
     ua,
     browser: {
-    	[msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin | unknown] : true,
-    	version: {
-    		major, // type string
-    		minor, // type string
-    		patch  // type string
-    	}
+        [msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin | unknown] : true,
+        name: ["msie" | "safari" | "firefox" | "chrome" | "opera" | "android" | "iphone" | "ipad" | "ipod" | "polaris" | "dolfin" | "unknown"], // type string
+        version: {
+            major, // type string
+            minor, // type string
+            patch  // type string
+        }
     },
     platform : ["pc" | "tablet" | "mobile"], // type string
     os : {
-        ["windows" | "mac" | "linux" | "android" | "ios" | "unknown"] : true
+        ["windows" | "mac" | "linux" | "android" | "ios" | "unknown"] : true,
+        name : ["windows" | "mac" | "linux" | "android" | "ios" | "unknown"] // type string
     }
 };
 
