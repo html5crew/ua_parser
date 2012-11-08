@@ -26,5 +26,6 @@
           "type": "GNU LGPL",
           "url": "http://github.com/eastkiki/userAgent/blob/master/LICENSE"
         }
-    ]
+    ],
+    "copyright": "Frontend Tech. Team in Daum Communications Corp."
 }
