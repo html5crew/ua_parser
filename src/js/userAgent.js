@@ -3,10 +3,10 @@
 /*global slide, Class, gesture*/
 
 // Make userAgent a Node module, if possible.
-if (typeof exports === 'object' && exports) {
+if (typeof exports === 'object') {
     var util = {};
     exports.util = util;
-} else {
+} else if (typeof window === 'object') {
     window.util = (typeof window.util === 'undefined') ? {} : window.util;
 }
 
@@ -36,9 +36,9 @@ if (typeof exports === 'object' && exports) {
             browser[match[1]] = true;
             browser.name = match[1];
             browser.version = {};
-            browser.version.info = match[2] || "0";
 
-            var versions = match[2].split(/[.|-|_]/);
+            var versions = match[2] ? match[2].split(/[.|-|_]/) : ["0","0","0"];
+            browser.version.info = versions.join(".");
             browser.version.major = versions[0] || "0";
             browser.version.minor = versions[1] || "0";
             browser.version.patch = versions[2] || "0";
@@ -82,7 +82,8 @@ if (typeof exports === 'object' && exports) {
                         (/like mac os x./.test(ua)? "ios" : false)||
                         (/(mac os)/.test(ua)? "mac" : false) ||
                         (/(windows)/.test(ua) && !(/polaris|natedata|(01[0|1|6|7|8|9]\d{3,4}\d{4}$)/.test(ua))? "windows" : false) ||
-                        (/(linux)/.test(ua)? "linux" : false) || "unknown";
+                        (/(linux)/.test(ua)? "linux" : false) ||
+                        (/(rim|blackberry)/.test(ua)? "blackberry" : false) || "unknown";
             os[match] = true;
             os.name = match;
             return os;

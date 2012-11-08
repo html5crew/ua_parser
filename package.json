@@ -1,7 +1,7 @@
 {
     "name": "ua_parser",
     "description": "check browser and browser's version from userAgent",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "author": {
         "name" : "Dong-il Kim",
         "email" : "east715@gmail.com",
@@ -19,7 +19,7 @@
     "engines": { "node": ">= 0.6" },
     "scripts":{
         "test": "node build.js",
-        "start": "node build.js"
+        "start": "node server.js"
     },
     "licenses": [
         {

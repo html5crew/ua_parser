@@ -3,7 +3,7 @@ var path = require("path"),
 
 var command = "./node_modules/.bin/grunt -v";
 exec(path.normalize(command), function (err, stdout, stderr) {
-    if (err && !stderr) {
+    if (err) {
         console.log(err.stack, err);
     }
 
