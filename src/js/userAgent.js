@@ -37,7 +37,7 @@ if (typeof exports === 'object') {
             browser.name = match[1];
             browser.version = {};
 
-            var versions = match[2] ? match[2].split(/[.|-|_]/) : ["0","0","0"];
+            var versions = match[2] ? match[2].split(/\.|-|_/) : ["0","0","0"];
             browser.version.info = versions.join(".");
             browser.version.major = versions[0] || "0";
             browser.version.minor = versions[1] || "0";
