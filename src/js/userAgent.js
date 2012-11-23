@@ -2,14 +2,6 @@
 */
 /*global slide, Class, gesture*/
 
-// Make userAgent a Node module, if possible.
-if (typeof exports === 'object') {
-    var util = {};
-    exports.util = util;
-} else if (typeof window === 'object') {
-    window.util = (typeof window.util === 'undefined') ? {} : window.util;
-}
-
 (function (exports) {
     'use strict';
 
@@ -29,7 +21,7 @@ if (typeof exports === 'object') {
                     /(android)[ \/]([\w._\-]+);/.exec(ua) || [match[0], "safari", match[2]];
             } else if (match[1] === "mozilla") {
                 match[1] = "firefox";
-            } else if (/polaris|natedata|(01[0|1|6|7|8|9]\d{3,4}\d{4}$)/.test(ua)) {
+            } else if (/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua)) {
                 match[1] = "polaris";
             }
 
@@ -81,7 +73,7 @@ if (typeof exports === 'object') {
                 match = (/android/.test(ua)? "android" : false) ||
                         (/like mac os x./.test(ua)? "ios" : false)||
                         (/(mac os)/.test(ua)? "mac" : false) ||
-                        (/(windows)/.test(ua) && !(/polaris|natedata|(01[0|1|6|7|8|9]\d{3,4}\d{4}$)/.test(ua))? "windows" : false) ||
+                        (/(windows)/.test(ua) && !(/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua))? "windows" : false) ||
                         (/(linux)/.test(ua)? "linux" : false) ||
                         (/(rim|blackberry)/.test(ua)? "blackberry" : false) || "unknown";
             os[match] = true;
@@ -97,4 +89,13 @@ if (typeof exports === 'object') {
         };
     };
 
-})(util);
+})((function (){
+    // Make userAgent a Node module, if possible.
+    if (typeof exports === 'object') {
+        exports.util = (typeof exports.util === 'undefined') ? {} : exports.util;
+        return exports.util;
+    } else if (typeof window === 'object') {
+        window.util = (typeof window.util === 'undefined') ? {} : window.util;
+        return window.util;
+    }
+})());
