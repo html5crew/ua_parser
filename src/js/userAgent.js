@@ -73,8 +73,11 @@
                 match = (/android/.test(ua)? "android" : false) ||
                         (/like mac os x./.test(ua)? "ios" : false)||
                         (/(mac os)/.test(ua)? "mac" : false) ||
-                        (/(windows)/.test(ua) && !(/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua))? "windows" : false) ||
+                        (/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua)? "polaris" : false) ||
+                        (/(windows)/.test(ua)? "windows" : false) ||
                         (/(linux)/.test(ua)? "linux" : false) ||
+                        (/webos/.test(ua)? "webos" : false) ||
+                        (/bada/.test(ua)? "bada" : false) ||
                         (/(rim|blackberry)/.test(ua)? "blackberry" : false) || "unknown";
             os[match] = true;
             os.name = match;

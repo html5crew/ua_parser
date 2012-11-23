@@ -98,14 +98,14 @@
         "ua": "Mozilla/5.0 (Linux; U; Android 3.1; ko-kr; SHW-M380S Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13"
     },
     {
-        "os_name": "unknown",
+        "os_name": "bada",
         "browser_name": "dolfin",
         "browser_version": "2.2",
         "platform": "mobile",
         "ua": "Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8530/M210SKSKD1; U; Bada/1.2; ko-kr) AppleWebKit/534.20 (KHTML, like Gecko) Dolfin/2.2 Mobile WVGA SMM-MMS/1.2.0 OPN-B"
     },
     {
-        "os_name": "unknown",
+        "os_name": "polaris",
         "browser_name": "polaris",
         "browser_version": "6.0",
         "platform": "mobile",
