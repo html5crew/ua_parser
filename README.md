@@ -28,6 +28,15 @@ ua = {
     os : {
         ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown"] : true,
         name : ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown"] // type string
+    },
+    addendum: {
+        name: ["daumapps" | "crios"], // type string
+        version: {
+            info,  // type string (version full string : [major.minor.patch])
+            major, // type string
+            minor, // type string
+            patch  // type string
+        }
     }
 };
 
@@ -64,6 +73,15 @@ ua = {
     os : {
         ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown"] : true,
         name : ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown"] // type string
+    },
+    addendum: {
+        name: ["daumapps" | "crios"], // type string
+        version: {
+            info,  // type string (version full string : [major.minor.patch])
+            major, // type string
+            minor, // type string
+            patch  // type string
+        }
     }
 };
 
