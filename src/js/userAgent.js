@@ -27,16 +27,23 @@
 
             browser[match[1]] = true;
             browser.name = match[1];
-            browser.version = {};
-
-            var versions = match[2] ? match[2].split(/\.|-|_/) : ["0","0","0"];
-            browser.version.info = versions.join(".");
-            browser.version.major = versions[0] || "0";
-            browser.version.minor = versions[1] || "0";
-            browser.version.patch = versions[2] || "0";
+            browser.version = setVersion(match[2]);
 
             return browser;
         }
+
+        function setVersion(versionString) {
+            var version = {};
+
+            var versions = versionString ? versionString.split(/\.|-|_/) : ["0","0","0"];
+            version.info = versions.join(".");
+            version.major = versions[0] || "0";
+            version.minor = versions[1] || "0";
+            version.patch = versions[2] || "0";
+
+            return version;
+        }
+
         function checkPlatform (ua) {
             if (isPc(ua)) {
                 return "pc";
@@ -84,11 +91,24 @@
             return os;
         }
 
+        function checkAddendum (ua) {
+            var addendum = {},
+                match = /(crios)[ \/]([\w.]+)/.exec( ua ) ||
+                        /(daumapps)[ \/]([\w.]+)/.exec( ua ) ||
+                        ["",""];
+
+            addendum.name = match[1];
+            addendum.version = setVersion(match[2]);
+
+            return addendum;
+        }
+
         return {
             ua: ua,
             browser: checkUserAgent(ua),
             platform: checkPlatform(ua),
-            os: checkOs(ua)
+            os: checkOs(ua),
+            addendum: checkAddendum(ua)
         };
     };
 

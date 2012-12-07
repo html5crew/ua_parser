@@ -138,5 +138,26 @@
         "browser_version": "11.50",
         "platform": "mobile",
         "ua": "Opera/9.80 (Android 4.0.1; Linux; Opera Mobi/ ADR-1111101157; U; en) Presto/2.9.201 Version/11.50"
+    },
+    {
+        "os_name": "android",
+        "browser_name": "android",
+        "browser_version": "2.2.2",
+        "platform": "mobile",
+        "ua": "Mozilla/5.0 (Linux; U; Android 2.2.2; ko-kr; LG-LU6800 Build/FRG83G) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1 DaumApps/3.2.2",
+        "addendum_name":  "daumapps",
+        "addendum_version":  "3.2.2"
+    },
+    {
+        "os_name": "ios",
+        "browser_name": "iphone",
+        "browser_version": "6.0.1",
+        "platform": "mobile",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X; ko-kr) AppleWebKit/536.26 (KHTML, like Gecko) CriOS/23.0.1271.91 Mobile/10A523 Safari/8536.25 (C4AF0108-DE6C-45B4-AD91-B59D496F3E7F)",
+        "addendum_name":  "crios",
+        "addendum_version":  "23.0.1271.91"
     }
 ]
+
+
+

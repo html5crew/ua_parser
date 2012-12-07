@@ -34,6 +34,20 @@ describe("userAgent.js", function () {
                         expect(ua.os[userAgent.os_name]).toBeTruthy();
                         expect(ua.os.name).toBe(userAgent.os_name);
                     });
+
+                    if (userAgent.addendum_name) {
+                        it('should identify addendum :' + userAgent.addendum_name, function () {
+                            expect(ua.addendum.name).toBe(userAgent.addendum_name);
+                        });
+                        it('should identify addendum version :' + userAgent.addendum_version, function () {
+                            var versions = userAgent.addendum_version.split(/[.|-|_]/);
+                            expect(ua.addendum.version.major).toBe(versions[0]);
+                            expect(ua.addendum.version.minor).toBe(versions[1]);
+                            if (versions[2]) {
+                                expect(ua.addendum.version.patch).toBe(versions[2]);
+                            }
+                        });
+                    }
                 });
             })(UA_LIST[i]);
         }
