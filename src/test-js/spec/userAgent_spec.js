@@ -35,16 +35,16 @@ describe("userAgent.js", function () {
                         expect(ua.os.name).toBe(userAgent.os_name);
                     });
 
-                    if (userAgent.addendum_name) {
-                        it('should identify addendum :' + userAgent.addendum_name, function () {
-                            expect(ua.addendum.name).toBe(userAgent.addendum_name);
+                    if (userAgent.app_name) {
+                        it('should identify app :' + userAgent.app_name, function () {
+                            expect(ua.app.name).toBe(userAgent.app_name);
                         });
-                        it('should identify addendum version :' + userAgent.addendum_version, function () {
-                            var versions = userAgent.addendum_version.split(/[.|-|_]/);
-                            expect(ua.addendum.version.major).toBe(versions[0]);
-                            expect(ua.addendum.version.minor).toBe(versions[1]);
+                        it('should identify app version :' + userAgent.app_version, function () {
+                            var versions = userAgent.app_version.split(/[.|-|_]/);
+                            expect(ua.app.version.major).toBe(versions[0]);
+                            expect(ua.app.version.minor).toBe(versions[1]);
                             if (versions[2]) {
-                                expect(ua.addendum.version.patch).toBe(versions[2]);
+                                expect(ua.app.version.patch).toBe(versions[2]);
                             }
                         });
                     }

@@ -91,16 +91,21 @@
             return os;
         }
 
-        function checkAddendum (ua) {
-            var addendum = {},
+        function checkApp (ua) {
+            var app = {},
                 match = /(crios)[ \/]([\w.]+)/.exec( ua ) ||
                         /(daumapps)[ \/]([\w.]+)/.exec( ua ) ||
                         ["",""];
 
-            addendum.name = match[1];
-            addendum.version = setVersion(match[2]);
+            if (match[1]) {
+                app.isApp = true;
+                app.name = match[1];
+                app.version = setVersion(match[2]);
+            } else {
+                app.isApp = false;
+            }
 
-            return addendum;
+            return app;
         }
 
         return {
@@ -108,7 +113,7 @@
             browser: checkUserAgent(ua),
             platform: checkPlatform(ua),
             os: checkOs(ua),
-            addendum: checkAddendum(ua)
+            app: checkApp(ua)
         };
     };
 
