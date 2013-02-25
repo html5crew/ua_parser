@@ -117,6 +117,10 @@
         };
     };
 
+    if (typeof window === 'object' && window.navigator.userAgent) {
+        window.ua_result = userAgent(window.navigator.userAgent) || null;
+    }
+
 })((function (){
     // Make userAgent a Node module, if possible.
     if (typeof exports === 'object') {
