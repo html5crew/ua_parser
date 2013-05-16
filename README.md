@@ -1,4 +1,4 @@
-# userAgent
+# ua_parser
 
 check browser and browser's version from userAgent
 
@@ -10,9 +10,10 @@ check browser and browser's version from userAgent
 
 ~~~~~~~
 
-var ua = util.userAgent();
+var ua = util.userAgent(); // or window.ua_result
 
-ua = {
+// result
+{
     ua,
     browser: {
         [msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin | unknown] : true,
@@ -39,7 +40,7 @@ ua = {
             patch  // type string
         }
     }
-};
+}
 
 ~~~~~~~
 
@@ -58,7 +59,8 @@ npm install ua_parser
 var util = require("ua_parser").util;
 var ua = util.userAgent(USERAGENT_STRING);
 
-ua = {
+// result
+{
     ua,
     browser: {
         [msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin | unknown] : true,
@@ -85,6 +87,6 @@ ua = {
             patch  // type string
         }
     }
-};
+}
 
 ~~~~~~~

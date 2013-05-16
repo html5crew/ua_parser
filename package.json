@@ -5,16 +5,16 @@
     "author": {
         "name" : "Dong-il Kim",
         "email" : "east715@gmail.com",
-        "url" : "https://github.com/eastkiki/userAgent"
+        "url" : "https://github.com/daumcorp/ua_parser"
     },
     "dependencies": {
     },
     "devDependencies": {
-        "grunt": "*",
+        "grunt": "~0.3.12",
         "grunt-jasmine": "*"
     },
     "keywords": ["ua", "browser", "detect", "userAgent", "parse"],
-    "repository": {"url": "git@github.com:eastkiki/userAgent.git", "type": "git"},
+    "repository": {"url": "git@github.com:daumcorp/ua_parser.git", "type": "git"},
     "main": "src/userAgent.js",
     "engines": { "node": ">= 0.6" },
     "scripts":{
@@ -23,8 +23,8 @@
     },
     "licenses": [
         {
-          "type": "GNU LGPL",
-          "url": "http://github.com/eastkiki/userAgent/blob/master/LICENSE"
+          "type": "MIT",
+          "url": "https://github.com/daumcorp/ua_parser/blob/master/LICENSE"
         }
     ],
     "copyright": "Frontend Tech. Team in Daum Communications Corp."
