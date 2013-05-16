@@ -2,7 +2,7 @@
 
 check browser and browser's version from userAgent
 
-[![Build Status](https://secure.travis-ci.org/eastkiki/userAgent.png?branch=master)](http://travis-ci.org/eastkiki/userAgent)
+[![Build Status](https://travis-ci.org/daumcorp/ua_parser.png?branch=master)](https://travis-ci.org/daumcorp/ua_parser)
 
 ## usage
 
