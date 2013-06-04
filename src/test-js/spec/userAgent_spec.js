@@ -2,7 +2,7 @@
 */
 /* global describe: true, beforeEach, it
 */
-var util = require("../../js/userAgent.js").util;
+var util = require("../../js/userAgent.js").daumtools;
 var fs = require("fs");
 
 describe("userAgent.js", function () {

@@ -121,13 +121,18 @@
         window.ua_result = userAgent(window.navigator.userAgent) || null;
     }
 
+    if (window) {
+        window.util = window.util || {};
+        util.userAgent = userAgent;
+    }
+
 })((function (){
     // Make userAgent a Node module, if possible.
     if (typeof exports === 'object') {
-        exports.util = (typeof exports.util === 'undefined') ? {} : exports.util;
-        return exports.util;
+        exports.daumtools = (typeof exports.daumtools === 'undefined') ? {} : exports.daumtools;
+        return exports.daumtools;
     } else if (typeof window === 'object') {
-        window.util = (typeof window.util === 'undefined') ? {} : window.util;
-        return window.util;
+        window.daumtools = (typeof window.daumtools === 'undefined') ? {} : window.daumtools;
+        return window.daumtools;
     }
 })());
