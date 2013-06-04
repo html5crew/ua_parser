@@ -1,31 +1,44 @@
 {
-    "name": "ua_parser",
-    "description": "check browser and browser's version from userAgent",
-    "version": "1.0.11",
-    "author": {
-        "name" : "Dong-il Kim",
-        "email" : "east715@gmail.com",
-        "url" : "https://github.com/daumcorp/ua_parser"
-    },
-    "dependencies": {
-    },
-    "devDependencies": {
-        "grunt": "~0.3.12",
-        "grunt-jasmine": "*"
-    },
-    "keywords": ["ua", "browser", "detect", "userAgent", "parse"],
-    "repository": {"url": "git@github.com:daumcorp/ua_parser.git", "type": "git"},
-    "main": "src/userAgent.js",
-    "engines": { "node": ">= 0.6" },
-    "scripts":{
-        "test": "node build.js",
-        "start": "node server.js"
-    },
-    "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/daumcorp/ua_parser/blob/master/LICENSE"
-        }
-    ],
-    "copyright": "Frontend Tech. Team in Daum Communications Corp."
+  "name": "ua_parser",
+  "description": "check browser and browser's version from userAgent",
+  "version": "1.0.11",
+  "author": {
+    "name": "Dong-il Kim",
+    "email": "east715@gmail.com",
+    "url": "https://github.com/daumcorp/ua_parser"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jasmine": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.6.0"
+  },
+  "keywords": [
+    "ua",
+    "browser",
+    "detect",
+    "userAgent",
+    "parse"
+  ],
+  "repository": {
+    "url": "git@github.com:daumcorp/ua_parser.git",
+    "type": "git"
+  },
+  "main": "src/userAgent.js",
+  "engines": {
+    "node": ">= 0.6"
+  },
+  "scripts": {
+    "test": "node build.js",
+    "build": "node build.js",
+    "start": "node server.js"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/daumcorp/ua_parser/blob/master/LICENSE"
+    }
+  ],
+  "copyright": "Frontend Tech. Team in Daum Communications Corp."
 }

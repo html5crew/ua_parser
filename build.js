@@ -1,12 +1,10 @@
-var path = require("path"),
-    exec = require("child_process").exec;
+var cp = require("child_process");
 
-var command = "./node_modules/.bin/grunt -v";
-exec(path.normalize(command), function (err, stdout, stderr) {
-    if (err) {
-        console.log(err.stack, err);
-    }
+var isWin = !!process.platform.match(/^win/);
+var command = "grunt"+(isWin?".cmd":"");
 
-    console.log(stderr);
-    console.log(stdout);
+var grunt = cp.spawn(command, ['-v'], {cwd:"node_modules/.bin", stdio: 'inherit'});
+
+grunt.on('exit', function (code) {
+    console.info('build process exited with code ' + code);
 });

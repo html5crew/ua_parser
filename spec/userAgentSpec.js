@@ -2,19 +2,16 @@
 */
 /* global describe: true, beforeEach, it
 */
-var util = require("../../js/userAgent.js").daumtools;
-var fs = require("fs");
 
 describe("userAgent.js", function () {
 
-    var UA_LIST = JSON.parse(fs.readFileSync("src/test-js/spec/userAgentList.json", "utf-8"));
-
+    var UA_LIST = userAgentList;
     describe('Identify user-agents', function () {
 
         for (var i=0, len=UA_LIST.length; i<len; i++) {
             (function (userAgent) {
                 describe('Identify user-agents of ' + userAgent.os_name, function () {
-                    var ua = util.userAgent(userAgent.ua);
+                    var ua = daumtools.userAgent(userAgent.ua);
                     it('should identify browser : ' + userAgent.browser_name, function () {
                         expect(ua.browser[userAgent.browser_name]).toBeTruthy();
                         expect(ua.browser.name).toBe(userAgent.browser_name);

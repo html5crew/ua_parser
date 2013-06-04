@@ -1,4 +1,4 @@
-[
+var userAgentList = [
     {
         "os_name": "windows",
         "browser_name": "msie",
@@ -157,7 +157,4 @@
         "app_name":  "crios",
         "app_version":  "23.0.1271.91"
     }
-]
-
-
-
+];

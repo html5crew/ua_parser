@@ -1,6 +1,5 @@
 /*jshint browser: true
 */
-/*global slide, Class, gesture*/
 
 (function (exports) {
     'use strict';
@@ -74,7 +73,7 @@
                 return false;
             }
         }
-        
+
         function checkOs (ua) {
             var os = {},
                 match = (/android/.test(ua)? "android" : false) ||
@@ -123,7 +122,7 @@
 
     if (window) {
         window.util = window.util || {};
-        util.userAgent = userAgent;
+        window.util.userAgent = userAgent;
     }
 
 })((function (){
