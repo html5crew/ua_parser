@@ -10,7 +10,7 @@ describe("userAgent.js", function () {
 
         for (var i=0, len=UA_LIST.length; i<len; i++) {
             (function (userAgent) {
-                describe('Identify user-agents of ' + userAgent.os_name, function () {
+                describe(userAgent.index +' : Identify user-agents of ' + userAgent.os_name, function () {
                     var ua = daumtools.userAgent(userAgent.ua);
                     it('should identify browser : ' + userAgent.browser_name, function () {
                         expect(ua.browser[userAgent.browser_name]).toBeTruthy();
@@ -30,6 +30,16 @@ describe("userAgent.js", function () {
                     it('should identify OS :' + userAgent.os_name, function () {
                         expect(ua.os[userAgent.os_name]).toBeTruthy();
                         expect(ua.os.name).toBe(userAgent.os_name);
+                    });
+                    it('should identify OS version :' + userAgent.os_version, function () {
+                        console.log("[[" + userAgent.os_version + "]]");
+                        console.log(ua.os.version.info);
+                        var versions = userAgent.os_version.split(/[.|-|_]/);
+                        expect(ua.os.version.major).toBe(versions[0]);
+                        expect(ua.os.version.minor).toBe(versions[1]);
+                        if (versions[2]) {
+                            expect(ua.os.version.patch).toBe(versions[2]);
+                        }
                     });
 
                     if (userAgent.app_name) {

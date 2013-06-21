@@ -1,146 +1,188 @@
 var userAgentList = [
     {
+        "index" : "1",
         "os_name": "windows",
+        "os_version": "5.1",
         "browser_name": "msie",
         "browser_version": "6.0",
         "platform": "pc",
         "ua": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)"
     },
     {
+        "index" : "2",
         "os_name": "windows",
+        "os_version": "5.1",
         "browser_name": "msie",
         "browser_version": "7.0",
         "platform": "pc",
         "ua": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)"
     },
     {
+        "index" : "3",
         "os_name": "windows",
+        "os_version": "5.1",
         "browser_name": "msie",
         "browser_version": "8.0",
         "platform": "pc",
         "ua": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)"
     },
     {
+        "index" : "4",
         "os_name": "windows",
+        "os_version": "6.1",
         "browser_name": "msie",
         "browser_version": "9.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
     },
     {
+        "index" : "5",
         "os_name": "windows",
+        "os_version": "6.1",
         "browser_name": "chrome",
         "browser_version": "19.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.46 Safari/536.5"
     },
     {
+        "index" : "6",
         "os_name": "windows",
+        "os_version": "6.1",
         "browser_name": "safari",
         "browser_version": "5.1.5",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.5 Safari/534.55.3"
     },
     {
+        "index" : "7",
         "os_name": "windows",
+        "os_version": "6.1",
         "browser_name": "firefox",
         "browser_version": "12.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0"
     },
     {
+        "index" : "8",
         "os_name": "windows",
+        "os_version": "6.1",
         "browser_name": "opera",
         "browser_version": "11.62",
         "platform": "pc",
         "ua": "Opera/9.80 (Windows NT 6.1; WOW64; U; ko) Presto/2.10.229 Version/11.62"
     },
     {
+        "index" : "9",
         "os_name": "mac",
+        "os_version": "10_7_4",
         "browser_name": "chrome",
         "browser_version": "21.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.57 Safari/537.1"
     },
     {
+        "index" : "10",
         "os_name": "mac",
+        "os_version": "10_7_4",
         "browser_name": "safari",
         "browser_version": "6.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/536.25 (KHTML, like Gecko) Version/6.0 Safari/536.25"
     },
     {
+        "index" : "11",
         "os_name": "android",
+        "os_version": "4.0.1",
         "browser_name": "android",
         "browser_version": "4.0.1",
         "platform": "mobile",
         "ua": "Mozilla/5.0 (Linux; U; Android 4.0.1; ko-kr; Galaxy Nexus Build/ITL41F) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
     },
     {
+        "index" : "12",
         "os_name": "ios",
+        "os_version": "5_0_1",
         "browser_name": "iphone",
         "browser_version": "5.0.1",
         "platform": "mobile",
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A405 Safari/7534.48.3"
     },
     {
+        "index" : "13",
         "os_name": "ios",
+        "os_version": "4_3_2",
         "browser_name": "ipad",
         "browser_version": "4.3.2",
         "platform": "tablet",
         "ua": "Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; ko-kr) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8H7 Safari/6533.18.5"
     },
     {
+        "index" : "14",
         "os_name": "android",
+        "os_version": "3.1",
         "browser_name": "android",
         "browser_version": "3.1",
         "platform": "tablet",
         "ua": "Mozilla/5.0 (Linux; U; Android 3.1; ko-kr; SHW-M380S Build/HMJ37) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13"
     },
     {
+        "index" : "15",
         "os_name": "bada",
+        "os_version": "1.2",
         "browser_name": "dolfin",
         "browser_version": "2.2",
         "platform": "mobile",
         "ua": "Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8530/M210SKSKD1; U; Bada/1.2; ko-kr) AppleWebKit/534.20 (KHTML, like Gecko) Dolfin/2.2 Mobile WVGA SMM-MMS/1.2.0 OPN-B"
     },
     {
+        "index" : "16",
         "os_name": "polaris",
+        "os_version": "0.0.0",
         "browser_name": "polaris",
         "browser_version": "6.0",
         "platform": "mobile",
         "ua": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0;800*600;POLARIS 6.0;em1.0;lgtelecom;EB10-20080721-703976395;LG-LH2300;0)"
     },
     {
+        "index" : "17",
         "os_name": "android",
+        "os_version": "0.0.0",
         "browser_name": "firefox",
         "browser_version": "9.0",
         "platform": "mobile",
         "ua": "Mozilla/5.0 (Android; Linux armv7l; rv:9.0) Gecko/ Firefox/9.0 Fennec/9.0"
     },
     {
+        "index" : "18",
         "os_name": "windows",
+        "os_version": "7.5",
         "browser_name": "msie",
         "browser_version": "7.0",
         "platform": "mobile",
         "ua": "Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.5; Trident/3.1; IEMobile/7.0; NOKIA; Lumia 710)"
     },
     {
+        "index" : "19",
         "os_name": "windows",
+        "os_version": "7.5",
         "browser_name": "msie",
         "browser_version": "9.0",
         "platform": "mobile",
         "ua": "Mozilla/4.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/3.1; IEMobile/7.0; NOKIA; Lumia 710)"
     },
     {
+        "index" : "20",
         "os_name": "android",
+        "os_version": "4.0.1",
         "browser_name": "opera",
         "browser_version": "11.50",
         "platform": "mobile",
         "ua": "Opera/9.80 (Android 4.0.1; Linux; Opera Mobi/ ADR-1111101157; U; en) Presto/2.9.201 Version/11.50"
     },
     {
+        "index" : "21",
         "os_name": "android",
+        "os_version": "2.2.2",
         "browser_name": "android",
         "browser_version": "2.2.2",
         "platform": "mobile",
@@ -149,7 +191,9 @@ var userAgentList = [
         "app_version":  "3.2.2"
     },
     {
+        "index" : "22",
         "os_name": "ios",
+        "os_version": "6_0_1",
         "browser_name": "iphone",
         "browser_version": "6.0.1",
         "platform": "mobile",
