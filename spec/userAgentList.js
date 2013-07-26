@@ -200,5 +200,14 @@ var userAgentList = [
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X; ko-kr) AppleWebKit/536.26 (KHTML, like Gecko) CriOS/23.0.1271.91 Mobile/10A523 Safari/8536.25 (C4AF0108-DE6C-45B4-AD91-B59D496F3E7F)",
         "app_name":  "crios",
         "app_version":  "23.0.1271.91"
+    },
+    {
+        "index" : "23",
+        "os_name": "windows",
+        "os_version": "6.1",
+        "browser_name": "msie",
+        "browser_version": "11.0",
+        "platform": "pc",
+        "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64;; APCPMS=6C62.6D3B.5A90-win7^N20120628124448819404819E278840CFC33F_1187^1^1^1996859584^30312972^606376288; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; rv:11.0) like Gecko"
     }
 ];

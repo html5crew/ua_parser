@@ -32,8 +32,6 @@ describe("userAgent.js", function () {
                         expect(ua.os.name).toBe(userAgent.os_name);
                     });
                     it('should identify OS version :' + userAgent.os_version, function () {
-                        console.log("[[" + userAgent.os_version + "]]");
-                        console.log(ua.os.version.info);
                         var versions = userAgent.os_version.split(/[.|-|_]/);
                         expect(ua.os.version.major).toBe(versions[0]);
                         expect(ua.os.version.minor).toBe(versions[1]);

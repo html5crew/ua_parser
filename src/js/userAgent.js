@@ -19,7 +19,11 @@
                 match = /(iphone|ipad|ipod)[\S\s]*os ([\w._\-]+) like/.exec(ua) ||
                     /(android)[ \/]([\w._\-]+);/.exec(ua) || [match[0], "safari", match[2]];
             } else if (match[1] === "mozilla") {
-                match[1] = "firefox";
+                if (/trident/.test(ua)) {
+                    match[1] = "msie";
+                } else {
+                    match[1] = "firefox";
+                }
             } else if (/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua)) {
                 match[1] = "polaris";
             }
