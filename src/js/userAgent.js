@@ -1,4 +1,4 @@
-/*jshint browser: true
+/*jshint browser: true, node: true
 */
 
 (function (exports) {
@@ -138,8 +138,9 @@
 })((function (){
     // Make userAgent a Node module, if possible.
     if (typeof exports === 'object') {
-        exports.daumtools = (typeof exports.daumtools === 'undefined') ? {} : exports.daumtools;
-        return exports.daumtools;
+        exports.daumtools = exports;
+        exports.util = exports;
+        return exports;
     } else if (typeof window === 'object') {
         window.daumtools = (typeof window.daumtools === 'undefined') ? {} : window.daumtools;
         window.util = (typeof window.util === 'undefined') ? window.daumtools : window.util;

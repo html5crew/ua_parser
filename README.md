@@ -10,7 +10,7 @@ check browser and browser's version from userAgent
 
 ~~~~~~~
 
-var ua = util.userAgent(); // or window.ua_result
+var ua = daumtools.userAgent(); // or window.ua_result
 
 // result
 {
@@ -56,8 +56,7 @@ npm install ua_parser
 
 ~~~~~~~
 
-var util = require("ua_parser").util;
-var ua = util.userAgent(USERAGENT_STRING);
+var result = require("ua_parser").userAgent(USERAGENT_STRING);
 
 // result
 {
