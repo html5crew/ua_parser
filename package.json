@@ -27,7 +27,7 @@
     "url": "git@github.com:daumcorp/ua_parser.git",
     "type": "git"
   },
-  "main": "src/userAgent.js",
+  "main": "src/js/userAgent.js",
   "engines": {
     "node": ">= 0.8"
   },
