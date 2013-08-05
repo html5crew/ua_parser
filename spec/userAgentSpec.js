@@ -57,4 +57,10 @@ describe("userAgent.js", function () {
             })(UA_LIST[i]);
         }
     });
+
+    describe('legacy supports', function () {
+        it('should provide legacy "util" namespace', function () {
+            expect(util.userAgent).toBe(daumtools.userAgent);
+        });
+    });
 });

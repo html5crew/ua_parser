@@ -135,11 +135,6 @@
         window.ua_result = userAgent(window.navigator.userAgent) || null;
     }
 
-    if (window) {
-        window.util = window.util || {};
-        window.util.userAgent = userAgent;
-    }
-
 })((function (){
     // Make userAgent a Node module, if possible.
     if (typeof exports === 'object') {
@@ -147,6 +142,7 @@
         return exports.daumtools;
     } else if (typeof window === 'object') {
         window.daumtools = (typeof window.daumtools === 'undefined') ? {} : window.daumtools;
+        window.util = (typeof window.util === 'undefined') ? window.daumtools : window.util;
         return window.daumtools;
     }
 })());
