@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Ua parser : user agent string parser in javascript" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ua parser</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/daumcorp/ua_parser">View on GitHub</a>
+
+          <h1 id="project_title">Ua parser</h1>
+          <h2 id="project_tagline">user agent string parser in javascript</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/daumcorp/ua_parser/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/daumcorp/ua_parser/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="ua_parser" class="anchor" href="#ua_parser"><span class="octicon octicon-link"></span></a>ua_parser</h1>
+
+<p>check browser and browser's version from userAgent</p>
+
+<p><a href="https://travis-ci.org/daumcorp/ua_parser"><img src="https://travis-ci.org/daumcorp/ua_parser.png?branch=master" alt="Build Status"></a></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>usage</h2>
+
+<h3>
+<a name="browser" class="anchor" href="#browser"><span class="octicon octicon-link"></span></a>browser</h3>
+
+<pre><code>
+var ua = daumtools.userAgent(); // or window.ua_result
+
+// result
+{
+    ua,
+    browser: {
+        [msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin | unknown] : true,
+        name: "msie" | "safari" | "firefox" | "chrome" | "opera" | "android" | "iphone" | "ipad" | "ipod" | "polaris" | "dolfin" | "unknown", // type string
+        version: {
+            info,  // type string (version full string : [major.minor.patch])
+            major, // type string
+            minor, // type string
+            patch  // type string
+        }
+    },
+    platform : ["pc" | "tablet" | "mobile"], // type string
+    os : {
+        ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown"] : true,
+        name : "windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown" // type string
+    },
+    app: {
+        isApp: true | false, // type boolen
+        name: "daumapps" | "crios", // type string
+        version: {
+            info,  // type string (version full string : [major.minor.patch])
+            major, // type string
+            minor, // type string
+            patch  // type string
+        }
+    }
+}
+
+</code></pre>
+
+<h3>
+<a name="nodejs" class="anchor" href="#nodejs"><span class="octicon octicon-link"></span></a>nodejs</h3>
+
+<h4>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>install</h4>
+
+<pre><code>
+npm install ua_parser
+
+</code></pre>
+
+<pre><code>
+var result = require("ua_parser").userAgent(USERAGENT_STRING);
+
+// result
+{
+    ua,
+    browser: {
+        [msie | safari | firefox | chrome | opera | android | iphone | ipad | ipod | polaris | dolfin | unknown] : true,
+        name: "msie" | "safari" | "firefox" | "chrome" | "opera" | "android" | "iphone" | "ipad" | "ipod" | "polaris" | "dolfin" | "unknown", // type string
+        version: {
+            info,  // type string (version full string : [major.minor.patch])
+            major, // type string
+            minor, // type string
+            patch  // type string
+        }
+    },
+    platform : ["pc" | "tablet" | "mobile"], // type string
+    os : {
+        ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown"] : true,
+        name : "windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown" // type string
+    },
+    app: {
+        isApp: true | false, // type boolen
+        name: "daumapps" | "crios", // type string
+        version: {
+            info,  // type string (version full string : [major.minor.patch])
+            major, // type string
+            minor, // type string
+            patch  // type string
+        }
+    }
+}
+
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ua parser maintained by <a href="https://github.com/daumcorp">daumcorp</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
