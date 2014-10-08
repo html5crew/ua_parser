@@ -1,0 +1,29 @@
+{
+  "name": "ua_parser",
+  "version": "1.0.14",
+  "homepage": "https://github.com/daumcorp/ua_parser",
+  "authors": [
+    "Dong-il Kim <east715@gmail.com>"
+  ],
+  "description": "check browser and browser's version from userAgent",
+  "main": "src/js/userAgent.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "ua",
+    "browser",
+    "detect",
+    "userAgent",
+    "parse"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
