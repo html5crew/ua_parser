@@ -29,7 +29,7 @@
   },
   "main": "src/js/userAgent.js",
   "engines": {
-    "node": ">= 0.8"
+    "node": ">= 1.0"
   },
   "scripts": {
     "test": "node test.js",
