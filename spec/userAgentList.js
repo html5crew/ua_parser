@@ -209,5 +209,14 @@ var userAgentList = [
         "browser_version": "11.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64;; APCPMS=6C62.6D3B.5A90-win7^N20120628124448819404819E278840CFC33F_1187^1^1^1996859584^30312972^606376288; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; rv:11.0) like Gecko"
+    },
+    {
+        "index" : "24",
+        "os_name": "windows",
+        "os_version": "10.0",
+        "browser_name": "spartan",
+        "browser_version": "12.0",
+        "platform": "pc",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0"
     }
 ];
