@@ -1,6 +1,6 @@
 {
   "name": "ua_parser",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "homepage": "https://github.com/daumcorp/ua_parser",
   "authors": [
     "Dong-il Kim <east715@gmail.com>"
