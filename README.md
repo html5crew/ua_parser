@@ -2,7 +2,7 @@
 
 check browser and browser's version from userAgent
 
-[![Build Status](https://travis-ci.org/daumcorp/ua_parser.png?branch=master)](https://travis-ci.org/daumcorp/ua_parser)
+[![Build Status](https://travis-ci.org/html5crew/ua_parser.svg)](https://travis-ci.org/html5crew/ua_parser)
 
 ## usage
 
