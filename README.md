@@ -3,6 +3,8 @@
 check browser and browser's version from userAgent
 
 [![Build Status](https://travis-ci.org/html5crew/ua_parser.svg)](https://travis-ci.org/html5crew/ua_parser)
+[![NPM Stats](https://nodei.co/npm/ua_parser.png?downloads=true&downloadRank=true)](https://npmjs.org/packages/ua_parser/)
+
 
 ## usage
 
@@ -89,3 +91,5 @@ var result = require("ua_parser").userAgent(USERAGENT_STRING);
 }
 
 ~~~~~~~
+
+[![NPM](https://nodei.co/npm-dl/ua_parser.png)](https://nodei.co/npm/ua_parser/)
