@@ -62,7 +62,7 @@
             }
         }
         function isPc (ua) {
-            if (ua.match(/linux|windows (nt|98)|macintosh/) && !ua.match(/android|mobile|polaris|lgtelecom|uzard|natebrowser|ktf;|skt;/)) {
+            if (ua.match(/linux|windows (nt|98)|macintosh|cros/) && !ua.match(/android|mobile|polaris|lgtelecom|uzard|natebrowser|ktf;|skt;/)) {
                 return true;
             }
             return false;
@@ -92,6 +92,7 @@
                         /(mac) os x ([\w._\-]+)/.exec(ua) ||
                         (/(linux)/.test(ua)? ["", "linux", "0.0.0"] : false) ||
                         (/webos/.test(ua)? ["", "webos", "0.0.0"] : false) ||
+                        /(cros)(?:\s[\w]+\s)([\d._\-]+)/.exec(ua) ||
                         /(bada)[ \/]([\w._\-]+)/.exec(ua) ||
                         (/bada/.test(ua)? ["", "bada", "0.0.0"] : false) ||
                         (/(rim|blackberry|bb10)/.test(ua)? ["", "blackberry", "0.0.0"] : false) ||
@@ -101,6 +102,9 @@
                 match[1] = "ios";
             } else if (match[1] === "windows" && match[2] === "98") {
                 match[2] = "0.98.0";
+            }
+            if (match[1] === 'cros') {
+                match[1] = "chrome";
             }
             os[match[1]] = true;
             os.name = match[1];
