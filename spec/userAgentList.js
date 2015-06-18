@@ -218,5 +218,14 @@ var userAgentList = [
         "browser_version": "12.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0"
+    },
+    {
+        "index": "25",
+        "os_name": "chrome",
+        "os_version": "6946.52.0",
+        "browser_name": "chrome",
+        "browser_version": "43.0",
+        "platform": "pc",
+        "ua": "Mozilla/5.0 (X11; CrOS x86_64 6946.52.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.73 Safari/537.36"
     }
 ];
