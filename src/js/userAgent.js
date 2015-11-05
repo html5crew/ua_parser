@@ -25,8 +25,6 @@
                 } else {
                     match[1] = "firefox";
                 }
-            } else if (match[1] === "edge") {
-                match[1] = "spartan";
             } else if (/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua)) {
                 match[1] = "polaris";
             }
