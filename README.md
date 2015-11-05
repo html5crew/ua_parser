@@ -30,8 +30,8 @@ var ua = daumtools.userAgent(); // or window.ua_result
     },
     platform : ["pc" | "tablet" | "mobile"], // type string
     os : {
-        ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown"] : true,
-        name : "windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown" // type string
+        ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "chrome" | "unknown"] : true,
+        name : "windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "chrome" | "unknown" // type string
     },
     app: {
         isApp: true | false, // type boolen
@@ -76,8 +76,8 @@ var result = require("ua_parser").userAgent(USERAGENT_STRING);
     },
     platform : ["pc" | "tablet" | "mobile"], // type string
     os : {
-        ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown"] : true,
-        name : "windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "unknown" // type string
+        ["windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "chrome" | "unknown"] : true,
+        name : "windows" | "mac" | "linux" | "android" | "ios" | "blackberry" | "chrome" | "unknown" // type string
     },
     app: {
         isApp: true | false, // type boolen

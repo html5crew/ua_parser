@@ -214,7 +214,7 @@ var userAgentList = [
         "index" : "24",
         "os_name": "windows",
         "os_version": "10.0",
-        "browser_name": "spartan",
+        "browser_name": "edge",
         "browser_version": "12.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0"
