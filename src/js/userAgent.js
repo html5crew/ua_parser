@@ -12,6 +12,7 @@
                     /(edge)[ \/]([\w.]+)/.exec( ua ) ||
                     /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
                     /(opera)(?:.*version)?[ \/]([\w.]+)/.exec( ua ) ||
+                    /(iemobile)[ \/]([\w.]+)/.exec( ua ) ||
                     /(webkit)(?:.*version)?[ \/]([\w.]+)/.exec( ua ) ||
                     /(msie) ([\w.]+)/.exec( ua ) ||
                     ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+))?/.exec( ua ) ||
@@ -82,10 +83,10 @@
         function checkOs (ua) {
             var os = {},
                 match = /(iphone|ipad|ipod)[\S\s]*os ([\w._\-]+) like/.exec(ua) ||
+                        /(windows)(?: nt | phone(?: os){0,1} | )([\w._\-]+)/.exec(ua) ||
                         /(android)[ \/]([\w._\-]+);/.exec(ua) ||
                         (/android/.test(ua)? ["", "android", "0.0.0"] : false) ||
                         (/polaris|natebrowser|([010|011|016|017|018|019]{3}\d{3,4}\d{4}$)/.test(ua)? ["", "polaris", "0.0.0"] : false) ||
-                        /(windows)(?: nt | phone(?: os){0,1} | )([\w._\-]+)/.exec(ua) ||
                         (/(windows)/.test(ua)? ["", "windows", "0.0.0"] : false) ||
                         /(mac) os x ([\w._\-]+)/.exec(ua) ||
                         (/(linux)/.test(ua)? ["", "linux", "0.0.0"] : false) ||
