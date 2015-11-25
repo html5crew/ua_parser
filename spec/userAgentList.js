@@ -227,5 +227,33 @@ var userAgentList = [
         "browser_version": "43.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (X11; CrOS x86_64 6946.52.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.73 Safari/537.36"
+    },
+    {
+        "index": "26",
+        "os_name": "windows",
+        "os_version": "7.5",
+        "browser_name": "msie",
+        "browser_version": "9.0",
+        "platform": "mobile",
+        "ua": "Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)"
+    },
+    {
+        "index": "27",
+        "os_name": "windows",
+        "os_version": "10.0",
+        "browser_name": "edge",
+        "browser_version": "12.0",
+        "platform": "mobile",
+        "ua": "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.0"
+    },
+    {
+        "index": "28",
+        "os_name": "windows",
+        "os_version": "10.0",
+        "browser_name": "edge",
+        "browser_version": "12.0",
+        "platform": "pc",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.0"
     }
+    
 ];
