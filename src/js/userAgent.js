@@ -150,5 +150,11 @@
         window.daumtools = (typeof window.daumtools === 'undefined') ? {} : window.daumtools;
         window.util = (typeof window.util === 'undefined') ? window.daumtools : window.util;
         return window.daumtools;
+    } else if (typeof self === 'object') {
+        // for use in web workers
+        self.daumtools = (typeof self.daumtools === 'undefined') ? {} : self.daumtools;
+        self.util = (typeof self.util === 'undefined') ? self.daumtools : self.util;
+        return self;
     }
+
 })());
