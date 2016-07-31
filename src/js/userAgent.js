@@ -156,5 +156,4 @@
         self.util = (typeof self.util === 'undefined') ? self.daumtools : self.util;
         return self;
     }
-
 })());
