@@ -5,7 +5,17 @@
     'use strict';
 
     var userAgent = exports.userAgent = function (ua) {
-        ua = (ua || window.navigator.userAgent).toString().toLowerCase();
+        var lowerUa = '';
+        if (!ua) {
+            if (typeof window !== 'undefined' && window.navigator && typeof window.navigator.userAgent === 'string') {
+                lowerUa = window.navigator.userAgent.toLowerCase();
+            } else {
+                lowerUa = '';
+            }
+        } else {
+            lowerUa = ua.toLowerCase();
+        }
+
         function checkUserAgent(ua) {
             var browser = {};
             var match = /(dolfin)[ \/]([\w.]+)/.exec( ua ) ||
@@ -128,11 +138,11 @@
         }
 
         return {
-            ua: ua,
-            browser: checkUserAgent(ua),
-            platform: checkPlatform(ua),
-            os: checkOs(ua),
-            app: checkApp(ua)
+            ua: lowerUa,
+            browser: checkUserAgent(lowerUa),
+            platform: checkPlatform(lowerUa),
+            os: checkOs(lowerUa),
+            app: checkApp(lowerUa)
         };
     };
 
