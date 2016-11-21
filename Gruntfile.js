@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
             '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
             '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.copyright %>;\n' +
-            '* Licensed <%= pkg.licenses[0].type %> - <%= pkg.licenses[0].url %>*/\n'
+            '* Licensed <%= pkg.license %> */\n'
         },
         jshint: {
             options: {
