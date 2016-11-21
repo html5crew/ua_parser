@@ -254,6 +254,18 @@ var userAgentList = [
         "browser_version": "12.0",
         "platform": "pc",
         "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.0"
+    },
+    {
+        "index": "29",
+        "os_name": "ios",
+        "os_version": "10_1_1",
+        "browser_name": "iphone",
+        "browser_version": "10.1.1",
+        "platform": "mobile",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 KAKAOTALK 5.9.2",
+        "app_name":  "kakaotalk",
+        "app_version":  "5.9.2",
+        "isCustom": true
     }
     
 ];
