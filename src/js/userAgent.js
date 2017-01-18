@@ -4,6 +4,12 @@
 (function (exports) {
     'use strict';
 
+    if (!Array.isArray) {
+        Array.isArray = function(arg) {
+            return Object.prototype.toString.call(arg) === '[object Array]';
+        };
+    }
+    
     function checkUserAgent(ua) {
         var browser = {};
         var match = /(dolfin)[ \/]([\w.]+)/.exec( ua ) ||

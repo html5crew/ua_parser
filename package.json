@@ -1,7 +1,7 @@
 {
   "name": "ua_parser",
   "description": "check browser and browser's version from userAgent",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": {
     "name": "Dong-il Kim",
     "email": "east715@gmail.com",
