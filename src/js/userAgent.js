@@ -114,7 +114,7 @@
         return os;
     }
 
-    var baseAppList = ['crios', 'daumapps'];
+    var baseAppList = ['crios', 'fxios', 'daumapps'];
     function checkApp (ua, customAppList) {
         var app = {},
             match = null,

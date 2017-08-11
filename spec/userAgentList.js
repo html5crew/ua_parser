@@ -266,6 +266,17 @@ var userAgentList = [
         "app_name":  "kakaotalk",
         "app_version":  "5.9.2",
         "isCustom": true
+    },
+    {
+        "index": "30",
+        "os_name": "ios",
+        "os_version": "10_2_1",
+        "browser_name": "iphone",
+        "browser_version": "10.2.1",
+        "platform": "mobile",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) FxiOS/6.0 Mobile/14D27 Safari/602.4.6",
+        "app_name":  "fxios",
+        "app_version":  "6.0"
     }
     
 ];
