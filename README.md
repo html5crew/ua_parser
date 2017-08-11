@@ -35,7 +35,7 @@ var ua = daumtools.userAgent(); // or window.ua_result
     },
     app: {
         isApp: true | false, // type boolen
-        name: "daumapps" | "crios", // type string
+        name: "fxios" | "crios", // type string, fxios is firefox of iOS, crios is chrome of iOS.
         version: {
             info,  // type string (version full string : [major.minor.patch])
             major, // type string
@@ -81,7 +81,7 @@ var result = require("ua_parser").userAgent(USERAGENT_STRING);
     },
     app: {
         isApp: true | false, // type boolen
-        name: "daumapps" | "crios", // type string
+        name: "fxios" | "crios", // type string, fxios is firefox of iOS, crios is chrome of iOS.
         version: {
             info,  // type string (version full string : [major.minor.patch])
             major, // type string
