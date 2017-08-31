@@ -15,6 +15,7 @@
         var match = /(dolfin)[ \/]([\w.]+)/.exec( ua ) ||
                 /(edge)[ \/]([\w.]+)/.exec( ua ) ||
                 /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+                /(tizen)[ \/]([\w.]+)/.exec( ua ) ||
                 /(opera)(?:.*version)?[ \/]([\w.]+)/.exec( ua ) ||
                 /(webkit)(?:.*version)?[ \/]([\w.]+)/.exec( ua ) ||
                 /(msie) ([\w.]+)/.exec( ua ) ||
@@ -76,7 +77,7 @@
         return false;
     }
     function isMobile (ua) {
-        if (!!ua.match(/ip(hone|od)|android.+mobile|windows (ce|phone)|blackberry|bb10|symbian|webos|firefox.+fennec|opera m(ob|in)i|polaris|iemobile|lgtelecom|nokia|sonyericsson|dolfin|uzard|natebrowser|ktf;|skt;/)) {
+        if (!!ua.match(/ip(hone|od)|android.+mobile|windows (ce|phone)|blackberry|bb10|symbian|webos|firefox.+fennec|opera m(ob|in)i|tizen.+mobile|polaris|iemobile|lgtelecom|nokia|sonyericsson|dolfin|uzard|natebrowser|ktf;|skt;/)) {
             return true;
         } else {
             return false;
@@ -92,6 +93,7 @@
                     (/android/.test(ua)? ["", "android", "0.0.0"] : false) ||
                     (/(windows)/.test(ua)? ["", "windows", "0.0.0"] : false) ||
                     /(mac) os x ([\w._\-]+)/.exec(ua) ||
+                    /(tizen)[ \/]([\w._\-]+);/.exec(ua) ||
                     (/(linux)/.test(ua)? ["", "linux", "0.0.0"] : false) ||
                     (/webos/.test(ua)? ["", "webos", "0.0.0"] : false) ||
                     /(cros)(?:\s[\w]+\s)([\d._\-]+)/.exec(ua) ||

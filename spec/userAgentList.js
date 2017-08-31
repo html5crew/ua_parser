@@ -277,6 +277,15 @@ var userAgentList = [
         "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) FxiOS/6.0 Mobile/14D27 Safari/602.4.6",
         "app_name":  "fxios",
         "app_version":  "6.0"
+    },
+    {
+        "index": "31",
+        "os_name": "tizen",
+        "os_version": "3.0",
+        "browser_name": "tizen",
+        "browser_version": "3.0",
+        "platform": "mobile",
+        "ua": "Mozilla/5.0 (Linux; Tizen 3.0; FamilyHub) AppleWebKit/537.3 (KHTML, like Gecko) Version/2.3 Mobile Safari/537.3"
     }
     
 ];
