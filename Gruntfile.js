@@ -35,8 +35,7 @@ module.exports = function(grunt) {
             },
             uses_defaults: [
                 'Gruntfile.js',
-                'src/main/webapp/scripts/core/**/*.js',
-                'src/main/webapp/scripts/modules/**/*.js'
+                'src/js/*.js'
             ]
         },
         concat: {
@@ -48,7 +47,7 @@ module.exports = function(grunt) {
                     banner: '<%= meta.banner %>'
                 },
                 src: ['src/js/*.js'],
-                dest: 'dist/userAgent-<%= pkg.version %>.js'
+                dest: 'dist/ua_parser-<%= pkg.version %>.js'
             }
         },
         uglify: {
@@ -58,15 +57,15 @@ module.exports = function(grunt) {
                     ie8: true
                 },
                 src: ['src/js/*.js'],
-                dest: 'dist/userAgent-<%= pkg.version %>.min.js'
+                dest: 'dist/ua_parser-<%= pkg.version %>.min.js'
             }
         },
         jasmine: {
             ua_parse: {
-                src: 'src/js/userAgent.js',
+                src: 'src/js/ua_parser.js',
                 options: {
-                    specs: ['spec/userAgentList.js', 'spec/userAgentSpec.js'],
-                    outfile: 'userAgentSpec.html'
+                    specs: ['spec/ua_parser_list.js', 'spec/ua_parser_spec.js'],
+                    outfile: 'ua_parserSpec.html'
                 }
             }
         }

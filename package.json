@@ -1,7 +1,7 @@
 {
   "name": "ua_parser",
   "description": "check browser and browser's version from userAgent",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "author": {
     "name": "Dong-il Kim",
     "email": "east715@gmail.com",
@@ -22,13 +22,14 @@
     "browser",
     "detect",
     "userAgent",
-    "parse"
+    "parse",
+    "ua_parser"
   ],
   "repository": {
     "url": "git@github.com:html5crew/ua_parser.git",
     "type": "git"
   },
-  "main": "src/js/userAgent.js",
+  "main": "src/js/ua_parser.js",
   "engines": {
     "node": ">= 0.10.0"
   },
