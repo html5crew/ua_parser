@@ -12,6 +12,9 @@ module.exports = function(grunt) {
             '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.copyright %>;\n' +
             '* Licensed <%= pkg.license %> */\n'
         },
+        clean: {
+            build: ['dist/*']
+        },
         jshint: {
             options: {
                 curly: true,
@@ -51,7 +54,8 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 options: {
-                    banner: '<%= meta.banner %>'
+                    banner: '<%= meta.banner %>',
+                    ie8: true
                 },
                 src: ['src/js/*.js'],
                 dest: 'dist/userAgent-<%= pkg.version %>.min.js'
@@ -69,6 +73,7 @@ module.exports = function(grunt) {
     });
 
     // Load the plugin.
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -76,5 +81,5 @@ module.exports = function(grunt) {
     // Default task(s).
 
     grunt.registerTask('test', ['jshint', 'jasmine']);
-    grunt.registerTask('default', ['test', 'concat', 'uglify']);
+    grunt.registerTask('default', ['test', 'clean', 'concat', 'uglify']);
 };
