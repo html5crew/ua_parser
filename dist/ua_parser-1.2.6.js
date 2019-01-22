@@ -1,5 +1,5 @@
-/*! ua_parser - v1.2.4 - 2018-01-30
-* Copyright (c) 2018 HTML5 Tech. Team in Daum Communications Corp.;
+/*! ua_parser - v1.2.6 - 2019-01-22
+* Copyright (c) 2019 HTML5 Tech. Team in Daum Communications Corp.;
 * Licensed MIT */
 /*jshint browser: true, node: true
 */
