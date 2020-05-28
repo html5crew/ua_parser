@@ -75,8 +75,6 @@
         (ua.match(/macintosh/) && window.navigator.maxTouchPoints > 1)) {
             return true;
         }
-
-
         return false;
     }
     function isMobile (ua) {
