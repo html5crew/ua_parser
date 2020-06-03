@@ -1,5 +1,5 @@
-/*! ua_parser - v1.2.6 - 2019-01-22
-* Copyright (c) 2019 HTML5 Tech. Team in Daum Communications Corp.;
+/*! ua_parser - v1.2.7 - 2020-06-03
+* Copyright (c) 2020 HTML5 Tech. Team in Daum Communications Corp.;
 * Licensed MIT */
 /*jshint browser: true, node: true
 */
@@ -74,7 +74,8 @@
         return false;
     }
     function isTablet (ua) {
-        if (ua.match(/ipad/) || (ua.match(/android/) && !ua.match(/mobi|mini|fennec/))) {
+        if (ua.match(/ipad/) || (ua.match(/android/) && !ua.match(/mobi|mini|fennec/)) || 
+        (ua.match(/macintosh/) && window.navigator.maxTouchPoints > 1)) {
             return true;
         }
         return false;
@@ -109,6 +110,10 @@
             match[1] = "ios";
         } else if (match[1] === "windows" && match[2] === "98") {
             match[2] = "0.98.0";
+        }
+
+        if (match[1] === "mac" && window.navigator.maxTouchPoints > 1) {
+            match[1] = "ios";
         }
         if (match[1] === 'cros') {
             match[1] = "chrome";
