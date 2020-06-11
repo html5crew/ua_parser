@@ -109,7 +109,7 @@
             match[2] = "0.98.0";
         }
 
-        if (match[1] === "mac" && window.navigator.maxTouchPoints > 1) {
+        if (match[1] === "mac" && (typeof window !== 'undefined' && window.navigator.maxTouchPoints > 1)) {
             match[1] = "ios";
         }
         if (match[1] === 'cros') {
