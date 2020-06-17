@@ -1,4 +1,4 @@
-/*! ua_parser - v1.2.7 - 2020-06-03
+/*! ua_parser - v1.2.8 - 2020-06-17
 * Copyright (c) 2020 HTML5 Tech. Team in Daum Communications Corp.;
 * Licensed MIT */
 /*jshint browser: true, node: true
@@ -112,7 +112,7 @@
             match[2] = "0.98.0";
         }
 
-        if (match[1] === "mac" && window.navigator.maxTouchPoints > 1) {
+        if (match[1] === "mac" && (typeof window !== 'undefined' && window.navigator.maxTouchPoints > 1)) {
             match[1] = "ios";
         }
         if (match[1] === 'cros') {
