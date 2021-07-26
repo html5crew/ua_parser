@@ -1,5 +1,5 @@
-/*! ua_parser - v1.2.8 - 2020-06-17
-* Copyright (c) 2020 HTML5 Tech. Team in Daum Communications Corp.;
+/*! ua_parser - v1.2.9 - 2021-07-26
+* Copyright (c) 2021 HTML5 Tech. Team in Daum Communications Corp.;
 * Licensed MIT */
 /*jshint browser: true, node: true
 */
@@ -75,7 +75,7 @@
     }
     function isTablet (ua) {
         if (ua.match(/ipad/) || (ua.match(/android/) && !ua.match(/mobi|mini|fennec/)) || 
-        (ua.match(/macintosh/) && window.navigator.maxTouchPoints > 1)) {
+        (ua.match(/macintosh/) && typeof window !== 'undefined' && window.navigator && window.navigator.maxTouchPoints > 1)) {
             return true;
         }
         return false;
@@ -112,7 +112,7 @@
             match[2] = "0.98.0";
         }
 
-        if (match[1] === "mac" && (typeof window !== 'undefined' && window.navigator.maxTouchPoints > 1)) {
+        if (match[1] === "mac" && (typeof window !== 'undefined' && window.navigator && window.navigator.maxTouchPoints > 1)) {
             match[1] = "ios";
         }
         if (match[1] === 'cros') {
